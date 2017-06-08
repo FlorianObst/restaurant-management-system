@@ -4,7 +4,8 @@ A simple, yet powerful, restaurant management system implemented as a JavaFX GUI
 
 
 <p align="center">
-  <img src="![alt text](https://github.com/FlorianObst/restaurant-management-system/blob/master/images/Welcome%20Page.png)"/>
+  <img src="https://github.com/FlorianObst/restaurant-management-system/blob/master/images/Welcome%20Page.png"/>
+
 </p>
 
 
