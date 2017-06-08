@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="313.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+	<children>
+      <VBox alignment="CENTER" layoutX="31.0" layoutY="51.0" prefHeight="212.0" prefWidth="276.0" spacing="20.0">
+         <children>
+      		<Label fx:id="connection" alignment="CENTER" prefHeight="45.0" prefWidth="340.0" text="Welcome">
+      			<font>
+      				<Font size="14.0" />
+      			</font>
+      		</Label>
+      		<TextField fx:id="username" prefHeight="30.0" prefWidth="200.0" promptText="Username">
+      			<font>
+      				<Font size="14.0" />
+      			</font>
+      		</TextField>
+      		<PasswordField fx:id="pw" prefHeight="28.0" prefWidth="200.0" promptText="Password">
+      			<font>
+      				<Font size="14.0" />
+      			</font>
+      		</PasswordField>
+      		<Button mnemonicParsing="false" onAction="#LoginEmp" prefHeight="25.0" prefWidth="396.0" text="Sign in as Employee" />
+            <Button mnemonicParsing="false" onAction="#LoginMgmt" prefHeight="25.0" prefWidth="331.0" text="Sign in as Manager" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+	</children>
+</AnchorPane>

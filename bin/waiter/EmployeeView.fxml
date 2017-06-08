@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="waiter.EmployeeController">
+	<children>
+		<Separator layoutY="36.0" prefHeight="4.0" prefWidth="978.0" />
+		<Button layoutX="892.0" layoutY="7.0" mnemonicParsing="false" onAction="#signOut" text="Sign Out" />
+		<Label fx:id="userLbl" contentDisplay="TOP" layoutX="93.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="96.0" text="User" />
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="82.0" text="Username:" />
+      <TabPane layoutY="51.0" prefHeight="478.0" prefWidth="978.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tables">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="450.0" prefWidth="978.0">
+                           <bottom>
+                              <HBox prefHeight="51.0" prefWidth="978.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="978.0">
+                                       <children>
+                                          <Pane prefHeight="51.0" prefWidth="472.0" />
+                                    		<Button fx:id="deleteOrdBtn" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="27.0" prefWidth="90.0" text="Delete" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </bottom>
+                           <top>
+                              <VBox prefHeight="23.0" prefWidth="978.0" BorderPane.alignment="CENTER" />
+                           </top>
+                           <center>
+                              <GridPane prefHeight="355.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button id="tableBtn" fx:id="knopf12" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="67.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="12">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl12" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue12" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl12" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue12" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf11" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="67.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="11">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl11" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue11" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl11" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue11" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf1" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl1" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue1" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl1" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue1" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf2" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl2" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue2" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl2" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue2" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf3" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="2">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl3" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue3" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl3" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue3" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf10" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="17.0" prefWidth="67.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="10">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl10" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue10" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl10" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue10" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf9" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="9">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl9" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue9" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl9" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue9" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf8" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl8" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue8" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl8" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue8" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf7" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="7">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl7" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue7" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl7" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue7" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf6" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="6">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl6" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue6" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl6" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue6" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf5" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="5">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl5" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue5" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl5" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue5" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                    <Button id="tableBtn" fx:id="knopf4" mnemonicParsing="false" prefHeight="62.0" prefWidth="96.0" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <VBox prefHeight="59.0" prefWidth="157.0">
+                                             <children>
+                                                <Pane prefHeight="16.0" prefWidth="157.0" />
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Pane prefHeight="20.0" prefWidth="107.0" />
+                                                      <Label prefHeight="20.0" prefWidth="16.0" text="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="157.0">
+                                                   <children>
+                                                      <Label fx:id="tableOrderlbl4" prefHeight="20.0" prefWidth="55.0" text="ID:" />
+                                                      <Label fx:id="tableOrderValue4" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="20.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="tableBilllbl4" prefHeight="20.0" prefWidth="55.0" text="Bill:" />
+                                                      <Label fx:id="tableBillValue4" prefHeight="20.0" text="#" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </graphic></Button>
+                                 </children>
+                              </GridPane>
+                           </center>
+                           <right>
+                              <HBox prefHeight="406.0" prefWidth="507.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox prefHeight="385.0" prefWidth="513.0">
+                                       <children>
+                                          <HBox prefHeight="138.0" prefWidth="484.0">
+                                             <children>
+                                                <Accordion fx:id="tablesAccordion" prefHeight="114.0" prefWidth="484.0">
+                                                  <panes>
+                                                    <TitledPane fx:id="searchByKeywordTables" animated="false" prefHeight="83.0" prefWidth="484.0" text="Search by keyword">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="486.0" spacing="10.0">
+                                                                     <children>
+                                                                  		<TextField fx:id="searchPromptText" prefHeight="25.0" prefWidth="129.0" promptText="Search" />
+                                                                        <ComboBox id="combo" fx:id="searchByBox" onAction="#selectCategoryMadeTables" prefHeight="25.0" prefWidth="99.0" promptText="Search by" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </TitledPane>
+                                                    <TitledPane fx:id="searchByTimeTables" animated="false" prefHeight="168.0" prefWidth="484.0" text="Search by time">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="482.0">
+                                                               <children>
+                                                                  <HBox prefHeight="54.0" prefWidth="486.0">
+                                                                     <children>
+                                                                        <VBox prefHeight="61.0" prefWidth="360.0">
+                                                                           <children>
+                                                                              <HBox prefHeight="18.0" prefWidth="360.0" spacing="10.0">
+                                                                                 <children>
+                                                                                    <DatePicker fx:id="tablesDatePickerStart" promptText="Start date" />
+                                                                                    <DatePicker fx:id="tablesDatePickerEnd" promptText="End date" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                                                 <children>
+                                                                                    <TextField fx:id="tablesTimeStart" prefHeight="25.0" prefWidth="169.0" promptText="Start time" />
+                                                                                    <TextField fx:id="tablesTimeEnd" prefWidth="169.0" promptText="End time" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER" prefHeight="90.0" prefWidth="123.0">
+                                                                           <children>
+                                                                              <Button fx:id="tablesSearchbyTime" mnemonicParsing="false" onAction="#searchTimeBtnCallTables" text="Search by Time" />
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </TitledPane>
+                                                  </panes>
+                                                </Accordion>
+                                             </children>
+                                          </HBox>
+                                          <Pane prefHeight="13.0" prefWidth="484.0" />
+                                    		<TableView fx:id="ordersTable" editable="true" prefHeight="225.0" prefWidth="484.0" tableMenuButtonVisible="true">
+                                    			<columns>
+                                    				<TableColumn fx:id="ordIdColumn" prefWidth="63.0" text="Order Id" />
+                                    				<TableColumn fx:id="tableNoColumn" prefWidth="51.0" text="Table" />
+                                    				<TableColumn fx:id="totalBillColumn" prefWidth="66.0" text="Total Bill" />
+                                    				<TableColumn fx:id="orderTimeColumnn" prefWidth="114.0" text="Order Time" />
+                                    				<TableColumn fx:id="commentsSpecialRequest" prefWidth="200.0" text="Special Request" />
+                                    			</columns>
+                                    		</TableView>
+                                       </children>
+                                    </VBox>
+                                    <Pane prefHeight="385.0" prefWidth="53.0" />
+                                 </children>
+                              </HBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Takeaway">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="449.0" prefWidth="978.0">
+                           <bottom>
+                              <VBox prefHeight="31.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox prefHeight="3.0" prefWidth="601.0" spacing="20.0">
+                                       <children>
+                                          <Button fx:id="deleteTakewayBtn" mnemonicParsing="false" onAction="#deleteTakeaway" prefHeight="27.0" prefWidth="96.0" text="Delete">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="closeTakeawayBtn" mnemonicParsing="false" onAction="#completeTakeAwayOrder" prefHeight="25.0" prefWidth="212.0" text="Mark as delivered/ Close order" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <center>
+                              <HBox prefHeight="322.0" prefWidth="785.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox prefHeight="322.0" prefWidth="480.0">
+                                       <children>
+                                          <HBox prefHeight="138.0" prefWidth="484.0">
+                                             <children>
+                                                <Accordion fx:id="takeawayAccordion" prefHeight="114.0" prefWidth="484.0">
+                                                   <panes>
+                                                      <TitledPane fx:id="searchByKeywordTakeaway" animated="false" prefHeight="83.0" prefWidth="484.0" text="Search by keyword">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <HBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="486.0" spacing="10.0">
+                                                                     <children>
+                                                                        <TextField fx:id="searchPromptTextTakeawy" prefHeight="25.0" prefWidth="129.0" promptText="Search" />
+                                                                        <ComboBox id="combo" fx:id="searchByBoxTakeaway" onAction="#selectCategoryMadeTables" prefHeight="25.0" prefWidth="99.0" promptText="Search by" />
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="searchByTimeTakeaway" animated="false" prefHeight="168.0" prefWidth="484.0" text="Search by time">
+                                                         <content>
+                                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="482.0">
+                                                               <children>
+                                                                  <HBox prefHeight="54.0" prefWidth="486.0">
+                                                                     <children>
+                                                                        <VBox prefHeight="61.0" prefWidth="360.0">
+                                                                           <children>
+                                                                              <HBox prefHeight="18.0" prefWidth="360.0" spacing="10.0">
+                                                                                 <children>
+                                                                                    <DatePicker fx:id="takeawayDatePickerStart" promptText="Start date" />
+                                                                                    <DatePicker fx:id="takeawayDatePickerEnd" promptText="Start date" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                                                 <children>
+                                                                                    <TextField fx:id="takeawayTimeStart" prefHeight="25.0" prefWidth="169.0" promptText="Start time" />
+                                                                                    <TextField fx:id="takeawayTimeEnd" prefWidth="169.0" promptText="End time" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER" prefHeight="90.0" prefWidth="123.0">
+                                                                           <children>
+                                                                              <Button fx:id="takeawaySearchbyTime" mnemonicParsing="false" onAction="#searchTimeBtnCallTakeaway" text="Search by Time" />
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                      </TitledPane>
+                                                   </panes>
+                                                </Accordion>
+                                             </children>
+                                          </HBox>
+                                          <Pane prefHeight="13.0" prefWidth="484.0" />
+                                          <TableView fx:id="takeawayTable" editable="true" prefHeight="230.0" prefWidth="467.0" tableMenuButtonVisible="true">
+                                             <columns>
+                                                <TableColumn fx:id="takeawaydIdColumn" prefWidth="26.0" text="Id" />
+                                                <TableColumn fx:id="takeawayTotalBillColumn" prefWidth="63.0" text="Total Bill" />
+                                                <TableColumn fx:id="takewayTimeColumnn" prefWidth="117.0" text="Order Time" />
+                                                <TableColumn fx:id="takeawaySpecialRequestColumn" prefWidth="155.0" text="Special Request" />
+                                                <TableColumn fx:id="takeawayTableNoColumn" prefWidth="122.0" text="Status" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <Pane prefHeight="297.0" prefWidth="10.0" />
+                                    <TableView fx:id="subOrdersTable" editable="true" prefHeight="344.0" prefWidth="466.0" tableMenuButtonVisible="true">
+                                       <columns>
+                                          <TableColumn fx:id="subOrderID" prefWidth="56.0" text="Sub ID" />
+                                          <TableColumn fx:id="productName" prefWidth="61.0" text="Product" />
+                                          <TableColumn fx:id="productCategory" prefWidth="65.0" text="Category" />
+                                          <TableColumn fx:id="productPrice" prefWidth="52.0" text="Price" />
+                                          <TableColumn fx:id="subOrderComment" prefWidth="230.0" text="Comment" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                           </center>
+                           <left>
+                              <Pane prefHeight="297.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <right>
+                              <Pane prefHeight="297.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </right>
+                           <top>
+                              <VBox prefHeight="23.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="userId" layoutX="210.0" layoutY="14.0" text="ID" visible="false" />
+	</children>
+</AnchorPane>
