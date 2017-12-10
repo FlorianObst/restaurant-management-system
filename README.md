@@ -1,6 +1,6 @@
 # Restaurant Management System
 
-🍕 A simple, yet powerful, restaurant management system implemented as a JavaFX GUI application and suing SQLite. The system provides accounts for managers and employees, lets users create/ manage bookings as well as modify the menu.
+🍕 A simple, yet powerful, restaurant management system implemented as a JavaFX GUI application and using SQLite. The system provides accounts for managers and employees, lets users create/ manage bookings as well as modify the menu. Program has been tested for various edge cases.
 
 ## Welcome
 <p align="center">
